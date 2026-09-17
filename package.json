@@ -1,0 +1,32 @@
+{
+  "name": "@caripay/email-domain-lists",
+  "version": "1.0.0",
+  "description": "Vendored, pinned lists of free and disposable email domains. Data only, no build step.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CariPay/email-domain-lists.git"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    },
+    "./free.json": "./data/free.json",
+    "./disposable.json": "./data/disposable.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "data",
+    "src",
+    "UPSTREAM.md",
+    "LICENSE",
+    "LICENSE-visulima.md"
+  ],
+  "scripts": {
+    "sync": "node scripts/sync-upstream.mjs",
+    "test": "node --test test/*.test.mjs"
+  }
+}
